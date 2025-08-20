@@ -9,4 +9,4 @@ const router = new RouterProvider({
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<React.StrictMode>{router}</React.StrictMode>);
+root.render(<div>{router}</div>);
