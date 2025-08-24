@@ -37,13 +37,6 @@ function RouteComponent() {
   return (
     <div>
       <div>index</div>
-      <div>
-        <span>publicKey:</span>
-        {state.publicKey}
-      </div>
-      <Button type="primary" onClick={() => {}}>
-        加密
-      </Button>
     </div>
   );
 }
