@@ -1,12 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, Router } from "@tanstack/react-router";
+import {
+  RouterProvider,
+  createRouter,
+  createHashHistory,
+} from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
-// 创建路由实例
-const router = new RouterProvider({
-  router: new Router({ routeTree }),
+const router = createRouter({
+  routeTree,
+  defaultPreload: "intent",
+  scrollRestoration: true,
+  // history: createHashHistory(),
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<div>{router}</div>);
+root.render(<RouterProvider router={router} />);
